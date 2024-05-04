@@ -201,7 +201,7 @@
         .custom-table {
           width: 80%;
           margin: 0 auto;
-      }
+        }
 
       .custom-table thead {
           background-color: red;
@@ -213,7 +213,45 @@
           color: white;
       }
 
-        
+      #notifyUpdateBtn{
+        position:relative;
+        padding:10px 30px;
+        display:inline-block;
+        color: #212529;
+        border:2px solid #212529;
+        transform: skewX(-45deg);
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size:20px;
+      }
+
+      .toast {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFC107;
+        color: #212529;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+    }
+
+    .toast-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .toast-body {
+        text-align: center;
+    }
+
+    .btn-close {
+        color: #212529;
+    }
     </style>
 </head>
 <body>
@@ -245,9 +283,25 @@
       <h4> SULONG ENGINEERING</h4>
       <div class="skew">
         <p>Greetings of Solidarity from the UE-CAL ENSC '23-'24!</p>
+        <button type="button" class="btn" id="notifyUpdateBtn">Notify Update</button>
       </div>
+    </div>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+              <img src="assets/en_logo.png" width="20px" height="20px" class="rounded me-2" alt="...">
+              <strong class="me-auto">ENSC</strong>
+              <small>25 mins too late</small>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+              Get to know the ENSC Candidates!
+            </div>
+          </div>
+        </div>
 
     </div>
+
  
     <div class="container text-center">
         <div id="carouselEN" class="carousel slide" data-bs-ride="carousel">
@@ -345,5 +399,21 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Get the button element
+      const button = document.getElementById('notifyUpdateBtn');
+
+      // Get the toast element
+      const toastElement = document.getElementById('liveToast');
+
+      // Initialize a Bootstrap Toast instance
+      const toast = new bootstrap.Toast(toastElement);
+
+      // Add an event listener to the button to show the toast on click
+      button.addEventListener('click', function() {
+          // Show the toast
+          toast.show();
+      });
+  </script>
 </body>
 </html>
