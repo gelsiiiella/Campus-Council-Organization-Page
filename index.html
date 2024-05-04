@@ -13,7 +13,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
         body {
-            font-family: 'Nabla', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
             color: #212529;
             margin: 0;
@@ -31,23 +31,25 @@
         }
 
         #front {
-            color: #FF6500;
-            font-weight: 700;
-            font-size: 4em;
-            font-family: 'Kanit', sans-serif;
-            margin-top: 60px;
-            margin-bottom: 30px;
-            text-align: center;
+          position: relative;
+          color: #FF6500;
+          font-weight: 700;
+          font-size: 10em;
+          font-family: 'Kanit';
+          line-height:0.9em;
+          letter-spacing: 2px;
+          text-align:center;
+          height: auto;
+          margin-top: 200px;
         }
-
-        #front:before {
-            content: attr(data-text);
-            position: absolute;
-            top: 30px;
-            left: -30px;
-            color: rgba(0, 0, 0, 0.3);
-            text-shadow: none;
-            filter: blur(8px);
+        #text:before{
+          content: attr(data-text);
+          position:absolute;
+          top:30px;
+          left:-30px;
+          color:rgba(0,0,0,0.3);
+          text-shadow: none;
+          filter:blur(8px);
         }
 
         .carousel-inner img {
@@ -66,8 +68,9 @@
         }
 
         footer {
-            background-color: #343a40;
-            color: #fff;
+            background-color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            color:#212529;
             padding: 30px 0;
         }
 
@@ -84,10 +87,27 @@
         .table-bordered {
             background-color: #fff;
         }
+        #carouselEN{
+          height: auto;
+          margin-top: 250px;
+
+        }
+        #pointers{
+          height: auto;
+          margin-top: 270px;
+
+        }
+        #schedule{
+          height: auto;
+          margin-top: 150px;
+
+        }
+        #schedule p{
+          text-align: justify;
+        }
     </style>
 </head>
 <body>
-    <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -109,12 +129,18 @@
         </div>
     </nav>
     
-    <!-- Front Section -->
     <div id="front" data-text="SULONG ENGINEERING A.Y. 2023-2024">SULONG ENGINEERING <br> A.Y. 2023-2024 </div>
-    
-    <!-- Carousel Section -->
+    <script type="text/javascript">
+      var text = document.getElementById('front');
+      var shadow = '';
+      for (var i = 0; i < 30; i++) {
+          shadow += (shadow ? ', ' : '') + i * 1 + 'px ' + i / 1 + 'px 0 #FFC100';
+      }
+      text.style.textShadow = shadow;
+    </script>
+ 
     <div class="container text-center">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselEN" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/grp_tinig.png" class="d-block w-100" alt="...">
@@ -123,20 +149,20 @@
                     <img src="assets/grp_tugon.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselEN" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselEN" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
     </div>
     
-    <!-- Card Section -->
+
     <div class="container">
-        <div class="row justify-content-center">
+        <div id="pointers" class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card mb-4">
                     <img src="assets/tinig.jpg" class="card-img-top" alt="...">
@@ -160,32 +186,32 @@
         </div>
     </div>
     
-    <!-- Take Note Section -->
-    <div class="container text-center">
-        <h1>Take Note EN Warriors! </h1>
-        <div class="col-md-8">
-            <table class="table table-bordered text-center">
-                <thead class="thead-dark">
-                    <tr>
-                        <th colspan="2">Schedule</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Miting de Avance</td>
-                        <td>April 30, 2024 1pm onwards</td>
-                    </tr>
-                    <tr>
-                        <td>Araw ng Halalan</td>
-                        <td>May 03, 2024 via Canvas</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="container text-center" id="schedule">
+      <h1>Take Note EN Warriors! </h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iusto, atque quae libero eligendi debitis excepturi. Eveniet, harum. A, praesentium dignissimos! Aspernatur quis sunt mollitia velit ab incidunt voluptas accusamus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione consectetur quas ad, temporibus similique deserunt officia tenetur accusamus voluptatem, animi nisi earum alias iusto sapiente, suscipit aspernatur odio cum. Incidunt?</p>
+      <div class="col-md-8 mx-auto"> 
+          <table class="table table-bordered text-center mx-auto"> <!-- Add mx-auto class to center the table -->
+              <thead class="thead-dark">
+                  <tr>
+                      <th colspan="2">Schedule</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Miting de Avance</td>
+                      <td>April 30, 2024 1pm onwards</td>
+                  </tr>
+                  <tr>
+                      <td>Araw ng Halalan</td>
+                      <td>May 03, 2024 via Canvas</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
     </div>
+
     
-    <!-- Footer Section -->
-    <footer class="text-center">
+    <footer class="text-center mt-1">
         <div class="container">
             <section class="mb-4">
                 <a class="btn btn-floating m-1" style="background-color: #3b5998;" href="#"><i class="fab fa-facebook-f"></i></a>
