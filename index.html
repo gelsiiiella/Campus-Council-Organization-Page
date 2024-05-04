@@ -23,6 +23,32 @@
         .navbar {
             background-color: #fff;
         }
+        .nav-item a {
+            font-size: 18px;
+            padding: 10px 20px; 
+            border-radius: 50px; 
+            transition: background-color 0.3s ease; 
+            text-decoration: none;
+            
+        }
+
+        .nav-link1 {
+            background-color: #FFC55A;
+            color: #f8f9fa;
+        }
+
+        .nav-link2 {
+            background-color: #dd4b39;
+            color: #f8f9fa;
+            margin-left: 50px;
+        }
+
+        .nav-item a:hover {
+            background-color: #000;
+        }
+
+        
+
 
         .navbar-brand img {
             width: 60px;
@@ -38,7 +64,7 @@
         }
         .container1{
           position:relative;
-          margin-top:100px;
+          margin-top:90px;
           max-width:1000px;
           transform: skewY(-20deg);
           margin-left: auto;
@@ -65,7 +91,6 @@
         .container1 .imgBx:hover img {
             transform: scale(1.1);
             box-shadow: 0 0 10px 5px orange;
-            content: 'Featuring ENSC Council Candidates'
         }
 
 
@@ -224,6 +249,11 @@
         letter-spacing: 2px;
         font-size:20px;
       }
+      #notifyUpdateBtn:hover{
+        color: #fff;
+        background-color: #212529;
+
+      }
 
       .toast {
         display: flex;
@@ -266,10 +296,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tugon</a>
+                        <a class="nav-link1" href="tugon.html">Tugon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tinig</a>
+                        <a class="nav-link2" href="tinig.html">Tinig</a>
                     </li>
                 </ul>
             </div>
@@ -334,7 +364,7 @@
                         <h5 class="card-title1">Tinig ng Silangan Party Alliance</h5>
                         <p class="card-text">Tunay. Palaban. Makabayan. The longest-serving, always pro-student community-based organization in UE Caloocan since 1981.</p>
                         <br>
-                        <a href="#" id="buttonEN">Know ENSC Tinig</a>
+                        <a href="tinig.html" id="buttonEN">Know ENSC Tinig</a>
                         <br><br>
                     </div>
                 </div>
@@ -346,7 +376,7 @@
                         <h5 class="card-title2">Nagkakaisang Tugon Party Alliance</h5>
                         <p class="card-text">Nagkakaisang Tugon Party Alliance is a political party in University of the East-Caloocan which aims to provide trained and passionate leaders.</p>
                         <br>
-                        <a href="#"  id="buttonEN">Know ENSC Tugon</a>
+                        <a href="tugon.html"  id="buttonEN">Know ENSC Tugon</a>
                         <br><br>
                     </div>
                 </div>
