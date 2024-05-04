@@ -120,6 +120,42 @@
           font-weight: bold;
           font-size: 2vw;
         }
+
+        #buttonEN{
+          --b: 3px;   /* border thickness */
+          --s: .45em; /* size of the corner */
+          --color: #373B44;
+          
+          padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+          color: var(--color);
+          --_p: var(--s);
+          background:
+            conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+            var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+          transition: .3s linear, color 0s, background-color 0s;
+          outline: var(--b) solid #0000;
+          outline-offset: .6em;
+          font-size: 16px;
+
+          border: 0;
+
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+        }
+
+        #buttonEN:hover,
+        #buttonEN:focus-visible{
+          --_p: 0px;
+          outline-color: var(--color);
+          outline-offset: .05em;
+        }
+
+        #buttonEN:active {
+          background: var(--color);
+          color: #fff;
+        }
+        
     </style>
 </head>
 <body>
@@ -184,7 +220,7 @@
                     <div class="card-body">
                         <h5 class="card-title1">Tinig ng Silangan Party Alliance</h5>
                         <p class="card-text">Tunay. Palaban. Makabayan. The longest-serving, always pro-student community-based organization in UE Caloocan since 1981.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#" id="buttonEN">Know ENSC Tinig</a>
                     </div>
                 </div>
             </div>
@@ -194,7 +230,7 @@
                     <div class="card-body">
                         <h5 class="card-title2">Nagkakaisang Tugon Party Alliance</h5>
                         <p class="card-text">Nagkakaisang Tugon Party Alliance is a political party in University of the East-Caloocan which aims to provide trained and passionate leaders.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="#"  id="buttonEN">Know ENSC Tugon</a>
                     </div>
                 </div>
             </div>
@@ -203,10 +239,11 @@
     
     <div class="container text-center" id="schedule">
       <h1>Take Note EN Warriors! </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae iusto, atque quae libero eligendi debitis excepturi. Eveniet, harum. A, praesentium dignissimos! Aspernatur quis sunt mollitia velit ab incidunt voluptas accusamus?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione consectetur quas ad, temporibus similique deserunt officia tenetur accusamus voluptatem, animi nisi earum alias iusto sapiente, suscipit aspernatur odio cum. Incidunt?</p>
+      <p>Hey Engineering Fam,
+
+        Join us for the Miting de Avance and ENSC election! We need your voice and vibes to make this thing rock! It's all about picking the right student-leaders who'll make our engineering life even sweeter. Your vote counts, so let's hang out, hear the pitches, and pick our peeps for the gig. It's gonna be chill, and your energy will make it epic! See you there! </p>
       <div class="col-md-8 mx-auto"> 
           <table class="table table-bordered text-center mx-auto"> <!-- Add mx-auto class to center the table -->
-              <thead class="thead-dark">
                   <tr>
                       <th colspan="2">Schedule</th>
                   </tr>
