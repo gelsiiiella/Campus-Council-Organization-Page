@@ -33,7 +33,7 @@
           line-height:0.9em;
           letter-spacing: 2px;
           text-align:center;
-          height: 1200px;
+          height: auto; /* Changed height to auto */
           margin-top: 60px;
         }
         #text:before{
@@ -59,14 +59,16 @@
         }
 
         .carousel-container {
-            width: 700px; 
+            width: 100%; /* Changed width to 100% */
+            max-width: 700px; /* Added max-width */
             margin: 0 auto 20px;
         }
 
         .carousel-item img {
-            width: 100%;
+            max-width: 100%; /* Changed width to max-width */
             height: auto;
         }
+
     </style>
 </head>
 <body>
@@ -91,12 +93,6 @@
         </div>
     </nav>
 </div>
-
-
-
-
-
-
     <div id="front" data-text="SULONG ENGINEERING A.Y. 2023-2024" class="container-md">SULONG ENGINEERING <br> A.Y. 2023-2024 </div>
     <script type="text/javascript">
       var text = document.getElementById('front');
@@ -106,27 +102,31 @@
       }
       text.style.textShadow = shadow;
     </script>
-    <div class="container-md">
-          <div class="carousel-container">
-              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                      <div class="carousel-item active">
-                          <img src="assets/grp_tinig.png" class="d-block w-150" alt="...">
+    <div class="container text-center">
+        <div class="container-md">
+          <div class="row">
+              <div class="carousel-container">
+                  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                          <div class="carousel-item active">
+                              <img src="assets/grp_tinig.png" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                              <img src="assets/grp_tugon.jpg" class="d-block w-100" alt="...">
+                          </div>
                       </div>
-                      <div class="carousel-item">
-                          <img src="assets/grp_tugon.jpg" class="d-block w-150" alt="...">
-                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                      </button>
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                  </button>
-              </div>
-    </div>
+                </div>
+            </div>
+  </div>
   </div>
 </body>
 </html>
