@@ -15,14 +15,13 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f8f9fa;
-            color: #212529;
+            color: #212529 ;
             margin: 0;
             padding: 0;
         }
 
         .navbar {
             background-color: #fff;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand img {
@@ -39,7 +38,7 @@
         }
         .container1{
           position:relative;
-          margin-top:150px;
+          margin-top:100px;
           max-width:1000px;
           transform: skewY(-20deg);
           margin-left: auto;
@@ -63,19 +62,12 @@
           margin-left: 150px;
 
         }
-        .container1 .imgBx:hover img:nth-child(3) {
-          transform: translate3d(100px, -100px, 100px); /* Adjusted for 3D translation */
-      }
+        .container1 .imgBx:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px 5px orange;
+            content: 'Featuring ENSC Council Candidates'
+        }
 
-      .container1 .imgBx:hover img:nth-child(2) {
-          transform: translate3d(50px, -50px, 50px); /* Adjusted for 3D translation */
-          opacity: 0.5;
-      }
-
-      .container1 .imgBx:hover img:nth-child(1) {
-          transform: translate3d(0, 0, 0); /* Adjusted for 3D translation */
-          opacity: 0.1;
-      }
 
         h4{
           position:relative;
@@ -132,12 +124,12 @@
         }
         #carouselEN{
           height: auto;
-          margin-top: 250px;
+          margin-top: 160px;
 
         }
         #pointers{
           height: auto;
-          margin-top: 270px;
+          margin-top: 200px;
 
         }
         #schedule{
@@ -200,6 +192,27 @@
         #buttonEN a{
           text-decoration: none;
         }
+        #notes h1{
+          font-size: 30px;
+        }
+        #notes p{
+          font-size: 20px;
+        }
+        .custom-table {
+          width: 80%;
+          margin: 0 auto;
+      }
+
+      .custom-table thead {
+          background-color: red;
+          color: yellow;
+      }
+
+      .custom-table tbody tr {
+          background-color: black;
+          color: white;
+      }
+
         
     </style>
 </head>
@@ -288,12 +301,13 @@
     </div>
     
     <div class="container text-center" id="schedule">
-      <div class="col-md-8 mx-auto"> 
+      <div class="col-md-8 mx-auto" id="notes"> 
         <h1>Take Note EN Warriors! </h1>
+        <br>
         <p>Join us for the Miting de Avance and ENSC election! We need your voice and vibes to make this thing rock! It's all about picking the right student-leaders who'll make our engineering life even sweeter. Your vote counts, so let's hang out, hear the pitches, and pick our peeps for the gig. It's gonna be chill, and your energy will make it epic! See you there! </p>
       </div>
       <div class="col-md-8 mx-auto"> 
-          <table class="table table-bordered text-center mx-auto">
+          <table class="table table-bordered text-center mx-auto custom-table">
                   <tr>
                       <th colspan="2">Schedule</th>
                   </tr>
