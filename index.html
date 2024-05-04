@@ -39,7 +39,7 @@
         }
         .container1{
           position:relative;
-          margin-top:200px;
+          margin-top:150px;
           max-width:1000px;
           transform: skewY(-20deg);
           margin-left: auto;
@@ -59,34 +59,40 @@
           filter:grayscale(1);
           max-width:100%;
           transition:0.5s;
-          width:900px;
+          width:800px;
           margin-left: 150px;
 
         }
-        .container1 .imgBx:hover img:nth-child(3){
-          transform:translate(100px,-100px);
-        }
-        .container1 .imgBx:hover img:nth-child(2){
-          transform:translate(50px,-50px);
-          opacity:0.5;
-        }
-        .container1 .imgBx:hover img:nth-child(1){
-          transform:translate(0px,0px);
-          opacity:0.1;
-        }
+        .container1 .imgBx:hover img:nth-child(3) {
+          transform: translate3d(100px, -100px, 100px); /* Adjusted for 3D translation */
+      }
+
+      .container1 .imgBx:hover img:nth-child(2) {
+          transform: translate3d(50px, -50px, 50px); /* Adjusted for 3D translation */
+          opacity: 0.5;
+      }
+
+      .container1 .imgBx:hover img:nth-child(1) {
+          transform: translate3d(0, 0, 0); /* Adjusted for 3D translation */
+          opacity: 0.1;
+      }
+
         h4{
           position:relative;
           color:#111;
-          font-size: 4em;
+          font-size: 90px;
           width:500px;
-          margin-top: 70px;
-          margin-left: 500px;
+          margin-top: 100px;
+          margin-left: 450px;
+          text-align: center;
         }
         .container1 .skew{
           transform-origin: top;
           transform:skewX(45deg);
-          margin-left: 500px;
+          margin-left: 600px;
           margin-right: auto; 
+          text-align: center;
+          font-size: 1vw;
         }
         
         .carousel-inner img {
